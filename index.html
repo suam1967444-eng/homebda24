@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>데이터 사이언티스트 포트폴리오</title>
+  <!-- 외부 리소스 목록 (CDN) -->
+  <!-- Google Fonts: Inter -->
+  <!-- Chart.js: https://cdn.jsdelivr.net/npm/chart.js -->
+  <!-- Font Awesome (icons): https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">데이터 사이언티스트 포트폴리오</div>
+      <nav class="main-nav" aria-label="주요 섹션">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#viz">Visualization</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button id="theme-toggle" aria-label="테마 전환" title="Theme toggle">🌗</button>
+        <button id="mobile-menu" class="mobile-menu" aria-label="메뉴 열기">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section id="hero" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-card">
+          <h1 id="name">[이름] 데이터 사이언티스트</h1>
+          <p class="role">실무 중심의 데이터 분석으로 의사결정을 앞당깁니다.</p>
+          <p class="summary">문제 정의 → 데이터 파이프라인 → 인사이트 도출 → 실행 가능한 권고 제안</p>
+          <div class="hero-ctas">
+            <a class="btn primary" href="#projects">프로젝트 보기</a>
+            <a class="btn ghost" href="#contact">연락하기</a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <h2>About — 요약</h2>
+        <p class="lead">데이터로 비즈니스 문제를 재정의하고, 실무에서 즉시 적용 가능한 인사이트와 실행 계획을 제공합니다.</p>
+        <div class="cards">
+          <article class="card">
+            <h3>Target Role</h3>
+            <p>Junior Data Scientist / Data Analyst</p>
+          </article>
+          <article class="card">
+            <h3>Strengths</h3>
+            <ul>
+              <li>데이터 → 지표 → 인사이트 → 액션 연결</li>
+              <li>비기술자도 이해 가능한 설명</li>
+              <li>분석 결과의 비즈니스 적용 설계</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="container">
+        <h2>Tech Stack</h2>
+        <div class="skills-grid">
+          <div class="skill-card">Python<br><small>Pandas, NumPy, scikit-learn</small></div>
+          <div class="skill-card">SQL<br><small>MySQL, Window Function</small></div>
+          <div class="skill-card">Excel<br><small>Pivot, XLOOKUP</small></div>
+          <div class="skill-card">Tableau<br><small>KPI 대시보드, 시계열</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <h2>Projects</h2>
+        <p class="muted">요약 → 상세 → 근거 구조로 재구성된 프로젝트 설명. 각 카드의 '자세히 보기'를 눌러 상세(아코디언 포함)를 확인하세요.</p>
+
+        <div class="tabs" role="tablist" aria-label="프로젝트 필터">
+          <button class="tab active" data-filter="all" role="tab">All</button>
+          <button class="tab" data-filter="python" role="tab">Python</button>
+          <button class="tab" data-filter="sql" role="tab">SQL</button>
+          <button class="tab" data-filter="tableau" role="tab">Tableau</button>
+          <button class="tab" data-filter="excel" role="tab">Excel</button>
+        </div>
+
+        <div id="projects-list" class="cards projects-list" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section id="viz" class="section">
+      <div class="container">
+        <h2>Visualization — 데모(가상 데이터)</h2>
+        <p class="muted">아래 차트의 데이터는 데모용 가상 데이터입니다. (README 기반 샘플 시나리오)</p>
+        <div class="viz-grid">
+          <div class="card viz-card">
+            <canvas id="kpiChart" aria-label="매출 추이 차트" role="img"></canvas>
+          </div>
+          <div class="card viz-card">
+            <canvas id="churnChart" aria-label="이탈률 추이" role="img"></canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h2>Contact</h2>
+        <p>GitHub / Tableau Public / Notion 링크는 README 참조 — 관심 있는 포지션에 맞춰 자료 공유 가능합니다.</p>
+        <div class="card contact-card">
+          <p><strong>Email:</strong> your.email@example.com</p>
+          <p><strong>GitHub:</strong> <a href="#" target="_blank" rel="noopener">https://github.com/your-id</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <button id="backToTop" title="Back to top">↑</button>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© 2025 Data Scientist Portfolio — Demo site. All demo data is synthetic.</small>
+    </div>
+  </footer>
+
+  <!-- Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
